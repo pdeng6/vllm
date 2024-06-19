@@ -5,8 +5,11 @@ sentencepiece  # Required for LLaMA tokenizer.
 numpy < 2.0.0
 requests
 py-cpuinfo
-transformers >= 4.40.0  # Required for StarCoder2 & Llava, Llama 3.
-tokenizers >= 0.19.1  # Required for Llama 3.
+# Following verion transformers and tokenizers conflicts to ipex-cpui
+# ww23, and actually we don't run llama3 for the time being, so just
+# skip them since we already have older version w/ ipex-cpu
+# transformers >= 4.40.0  # Required for StarCoder2 & Llava, Llama 3.
+# tokenizers >= 0.19.1  # Required for Llama 3.
 fastapi
 aiohttp
 openai
